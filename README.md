@@ -1,3 +1,6 @@
+# AuthSecure-lua-Example : Please star 🌟
+
+AuthSecure lua SDK for https://authsecure.shop license key API auth.
 ======================================
 🔹 AuthSecure Lua SDK (Universal)
 ======================================
@@ -12,8 +15,6 @@ Includes ready-to-use examples for:
   - authsecure_roblox.lua   — Roblox scripts
   - authsecure_fivem.lua    — FiveM server-side
 
-All connect to:
-  https://www.authsecure.shop/post/api.php
 
 ✅ Simple Integration:
   1. Edit credentials in Api()
