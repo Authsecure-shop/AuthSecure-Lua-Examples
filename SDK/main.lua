@@ -1,30 +1,41 @@
+-- Import the AuthSecure module
 local AuthSecure = require("authsecure")
 
-AuthSecure.Api(
-    "XD",                     -- Application Name
-    "3ezshCmkXrn",            -- Owner ID
-    "7a8bfeb28afcd690812ee5de010a6860",  -- Secret
-    "1.0"                     -- Version
-)
+-- Configuration variables
+local name = "XD" -- Application name
+local ownerid = "3ezshCmkXrn" -- Account ID
+local secret = "7a8bfeb28afcd690812ee5de010a6860" -- Application secret
+local version = "1.0" -- Application version
 
+
+
+-- Initialize API with your config
+AuthSecure.Api(name, ownerid, secret, version)
+
+-- Start initialization
 AuthSecure.Init()
 
+-- CLI Menu
 print("\n[1] Login\n[2] Register\n[3] License Login\n[4] Exit")
 io.write("Choose option: ")
 local choice = io.read()
 
+-- Menu handler
 if choice == "1" then
-    io.write("Username: ") local u = io.read()
-    io.write("Password: ") local p = io.read()
-    AuthSecure.Login(u, p)
+    io.write("Username: ") local username = io.read()
+    io.write("Password: ") local password = io.read()
+    AuthSecure.Login(username, password)
+
 elseif choice == "2" then
-    io.write("Username: ") local u = io.read()
-    io.write("Password: ") local p = io.read()
-    io.write("License: ") local l = io.read()
-    AuthSecure.Register(u, p, l)
+    io.write("Username: ") local username = io.read()
+    io.write("Password: ") local password = io.read()
+    io.write("License: ") local license = io.read()
+    AuthSecure.Register(username, password, license)
+
 elseif choice == "3" then
-    io.write("License: ") local l = io.read()
-    AuthSecure.License(l)
+    io.write("License: ") local license = io.read()
+    AuthSecure.License(license)
+
 else
     print("Goodbye!")
 end
